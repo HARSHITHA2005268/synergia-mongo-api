@@ -1,100 +1,110 @@
-🎟️ Synergia Event Booking API (MongoDB Version)
-📋 Overview
+# 🎯 Synergia Event Booking API (MongoDB Version)
 
-This project is an extended version of the Synergia Event Booking API built using Node.js, Express, and MongoDB (Mongoose).
-It provides a RESTful API for managing event bookings, including CRUD operations and advanced querying (search & filter).
+## 📖 Project Description
+This is my Synergia Event Booking API built using **Node.js**, **Express.js**, and **MongoDB**.  
+The project allows me to perform CRUD operations for event bookings, connect to a cloud MongoDB database, and handle event-related data efficiently.
 
-🚀 Features
+---
 
-Connects Node.js + Express app to MongoDB using Mongoose
+## ⚙️ Objectives
+- Connect my Node.js and Express API to MongoDB using Mongoose  
+- Perform full CRUD operations on the database  
+- Implement search and filtering features  
+- Follow proper REST API standards  
 
-Performs CRUD operations for bookings
+---
 
-Supports filtering and searching
+## 🧠 Technologies Used
+- Node.js  
+- Express.js  
+- MongoDB Atlas  
+- Mongoose  
+- dotenv  
+- Postman  
 
-Uses environment variables for secure database connection
+---
 
-Returns proper HTTP status codes and JSON responses
-
-🏗️ Technologies Used
-
-Node.js
-
-Express.js
-
-MongoDB (Atlas)
-
-Mongoose
-
-dotenv (for environment configuration)
-
-Postman (for API testing)
+## 🧩 Schema Design
+**Booking Model:**
+```json
+{
+  "name": "String",
+  "email": "String",
+  "event": "String",
+  "createdAt": "Date"
+}
+🚀 API Endpoints
+Method	Endpoint	Description
+POST	/api/bookings	Create a new booking
+GET	/api/bookings	Get all bookings
+GET	/api/bookings/:id	Get booking by ID
+PUT	/api/bookings/:id	Update booking details
+DELETE	/api/bookings/:id	Delete booking by ID
+GET	/api/bookings/search?name=value	Search bookings by name
+GET	/api/bookings/search?event=value	Search bookings by event name
 
 ⚙️ Installation & Setup
-1️⃣ Clone the repository
+1️⃣ Clone my repository
+
 git clone https://github.com/HARSHITHA2005268/synergia-mongo-api.git
 cd synergia-mongo-api
-
 2️⃣ Install dependencies
+
 npm install
+3️⃣ Create a .env file
+Add my MongoDB URI and port number inside it:
 
-3️⃣ Create .env file
+ini
 
-In the project root folder, create a .env file and add your MongoDB connection string:
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/synergia
+PORT=3000
+4️⃣ Run my server
 
-MONGO_URI = mongodb+srv://kulalharshitha2005:<password>@cluster0.vtu6f.mongodb.net/synergia
-PORT = 3000
+node server.js
+🧾 Example Request & Response
+POST /api/bookings
 
-
-⚠️ Replace <password> with your actual MongoDB password.
-Do not upload .env to GitHub.
-
-4️⃣ Run the server
-node serverr.js
-
-
-If successful:
-
-✅ MongoDB connected successfully
-🚀 Server running on port 3000
-
-🧩 API Endpoints
-No	Method	Endpoint	Description
-1.	GET	/api/bookings	Get all bookings
-2.	POST	/api/bookings	Create a new booking
-3.	GET	/api/bookings/:id	Get booking by ID
-4.	PUT	/api/bookings/:id	Update booking by ID
-5.	DELETE	/api/bookings/:id	Delete booking by ID
-6.	GET	/api/bookings/search?email=xyz@example.com	Search bookings by email
-7.	GET	/api/bookings/filter?event=Synergia	Filter bookings by event name
-🧠 Example POST Request
-
-URL: http://localhost:3000/api/bookings
-Body (JSON):
-
+json
+Copy code
 {
   "name": "Harshitha",
   "email": "harshitha@example.com",
-  "event": "Tech Fest 2025",
-  "ticketType": "VIP"
+  "event": "Tech Fest 2025"
 }
-
-
 Response:
 
+json
+Copy code
 {
   "message": "Booking created successfully",
   "booking": {
-    "_id": "6722f0e82a7b46e612f51b2c",
+    "_id": "690390ae2c4d43a427306170",
     "name": "Harshitha",
     "email": "harshitha@example.com",
     "event": "Tech Fest 2025",
-    "ticketType": "VIP",
-    "createdAt": "2025-10-30T16:22:06.035Z"
+    "createdAt": "2025-10-30T16:22:06.035+00:00"
   }
 }
-
 📸 Output Screenshots
+All my output screenshots are placed inside the screenshots/ folder for reference.
+They include:
 
-All output screenshots (Postman + MongoDB) are available inside the screenshots folder
+Database connection success
+
+CRUD operation results from Postman
+
+MongoDB data entries
+
+👩‍💻 Author
+Name: Harshitha Kulal
+Project: Synergia Event Booking API (MongoDB Version)
+Frameworks Used: Node.js, Express.js, MongoDB
+Tools Used: Postman, Visual Studio Code
+
+💡 Additional Notes
+My project demonstrates how to integrate MongoDB with an Express API.
+
+It also includes search, filter, and full CRUD support.
+
+This API can be extended for real-world event management systems.
 
