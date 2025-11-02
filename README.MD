@@ -60,13 +60,13 @@ If successful:
 
 🧩 API Endpoints
 No	Method	Endpoint	Description
-1	GET	/api/bookings	Get all bookings
-2	POST	/api/bookings	Create a new booking
-3	GET	/api/bookings/:id	Get booking by ID
-4	PUT	/api/bookings/:id	Update booking by ID
-5	DELETE	/api/bookings/:id	Delete booking by ID
-6	GET	/api/bookings/search?email=xyz@example.com	Search bookings by email
-7	GET	/api/bookings/filter?event=Synergia	Filter bookings by event name
+1.	GET	/api/bookings	Get all bookings
+2.	POST	/api/bookings	Create a new booking
+3.	GET	/api/bookings/:id	Get booking by ID
+4.	PUT	/api/bookings/:id	Update booking by ID
+5.	DELETE	/api/bookings/:id	Delete booking by ID
+6.	GET	/api/bookings/search?email=xyz@example.com	Search bookings by email
+7.	GET	/api/bookings/filter?event=Synergia	Filter bookings by event name
 🧠 Example POST Request
 
 URL: http://localhost:3000/api/bookings
@@ -97,3 +97,4 @@ Response:
 📸 Output Screenshots
 
 All output screenshots (Postman + MongoDB) are available inside the screenshots folder
+
