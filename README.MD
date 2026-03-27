@@ -1,4 +1,4 @@
-Synergia Event Booking API (MongoDB Version)
+ Synergia Event Booking API (MongoDB Version)
 📖 Project Description
 This is my Synergia Event Booking API built using Node.js, Express.js, and MongoDB.
 The project allows me to perform CRUD operations for event bookings, connect to a cloud MongoDB database, and handle event-related data efficiently.
